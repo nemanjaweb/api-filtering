@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Navigation</title>
+</head>
+
+<body>
+  <!-- navbar goes here -->
+  <nav class="text-white bg-bgDark">
+    <div class="container px-8 mx-auto overflow-hidden">
+      <div class="flex justify-between py-5">
+        <div>
+          <a href="#" class="">
+            <img src="./img/logo-white.svg" alt="Logo">
+          </a>
+        </div>
+        <div class="items-center hidden space-x-3 md:flex">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Services</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="relative items-center hidden md:flex">
+          <input type="text" placeholder="Search here..." class="py-2 pl-3 text-xs bg-transparent border rounded-full">
+          <img src="./img/search.svg" alt="">
+        </div>
+
+        <!-- mobile button -->
+        <div class="flex items-center md:hidden">
+          <button class="hamburger">
+            <img src="./img/hamburger.png" alt="Mobile Menu Icon">
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div class="hidden p-8 text-sm mobile-menu md:hidden">
+      <a href="#" class="block">Home</a>
+      <a href="#" class="block pt-2">About Us</a>
+      <a href="#" class="block pt-2">Services</a>
+      <a href="#" class="block pt-2">Blog</a>
+      <a href="#" class="block pt-2">Contact</a>
+    </div>
+  </nav>
+  <div class="flex flex-col items-center mt-20 news">
+    <div class="flex filters justify-evenly">
+      <button class="p-3 font-bold bg-blue-400 rounded-full cursor-pointer filter get_all_news"
+        data-filter="world">World</button>
+      <button class="p-3 font-bold bg-blue-400 rounded-full cursor-pointer filter get_all_news"
+        data-filter="us">U.S.</button>
+      <button class="p-3 font-bold bg-blue-400 rounded-full cursor-pointer filter get_all_news"
+        data-filter="home">Home</button>
+      <button class="p-3 font-bold bg-blue-400 rounded-full cursor-pointer filter get_all_news"
+        data-filter="science">Science</button>
+      <button class="p-3 font-bold bg-blue-400 rounded-full cursor-pointer filter get_all_news"
+        data-filter="arts">Arts</button>
+    </div>
+    <div id="news" class="md:flex md:flex-wrap"></div>
+  </div>
+  <script src="app.js"></script>
+  
+</body>
+
+</html>
